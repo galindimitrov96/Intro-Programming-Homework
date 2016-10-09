@@ -1,27 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+        DateTime todayDate = DateTime.Now;
+        Console.Write("Enter you'r birthday ");
+        string textInput = Console.ReadLine();
 
-namespace LongSequence
-{
-    class Program
-    {
-        static void Main(string[] args)
+        string dateFormat = "MM.dd.yyyy";
+        DateTime birthDate = DateTime.ParseExact(textInput, dateFormat, CultureInfo.InvariantCulture);
+
+        int age = todayDate.Year - birthDate.Year;
+        if (todayDate < birthDate.AddYears(age))
         {
-            Console.BufferHeight = 1010;
-            for (int i = 2; i < 1002; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine("{0},", i);
-                }
-                else
-                {
-                    Console.WriteLine("{0}", -i);
-                }
-            }
+            age--;
         }
-    }
-}
+        
+        Console.WriteLine("You are now {0} years old.", age);
+        Console.WriteLine("In 10 years you will be {0} years old.", age + 10);
