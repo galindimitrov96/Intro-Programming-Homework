@@ -1,3 +1,9 @@
+using System;
+using System.Globalization;
+class Program
+{
+    static void Main(string[] args)
+    {
         DateTime todayDate = DateTime.Now;
         Console.Write("Enter you'r birthday ");
         string textInput = Console.ReadLine();
@@ -10,6 +16,8 @@
         {
             age--;
         }
-        
+
         Console.WriteLine("You are now {0} years old.", age);
         Console.WriteLine("In 10 years you will be {0} years old.", age + 10);
+    }
+}
