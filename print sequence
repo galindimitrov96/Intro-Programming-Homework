@@ -13,7 +13,7 @@ namespace PrintSequence
                 }
                 else
                 {
-                    Console.WriteLine("{0}", -i);
+                    Console.WriteLine("{0},", -i);
                 }
             }
         }
